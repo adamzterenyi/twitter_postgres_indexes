@@ -1,5 +1,5 @@
-SET max_parallel_maintenance_workers = 80; 
-SET max_parallel_workers = 80; 
+SET max_parallel_maintenance_workers TO 80; 
+SET max_parallel_workers TO 80; 
 SET maintenance_work_mem TO '4 GB';
 CREATE INDEX idx_tweet_tags_tag ON tweet_tags(id_tweets, tag);
 CREATE INDEX idx_tweet_tags_id_tweets ON tweet_tags(tag, id_tweets);
