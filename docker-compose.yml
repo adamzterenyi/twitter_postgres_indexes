@@ -11,16 +11,16 @@ services:
       - POSTGRES_PASSWORD=pass
       - PGUSER=postgres
     ports:
-      - 1:5432
+      - 1362:5432
 
   pg_normalized_batch:
     build: services/pg_normalized_batch
     volumes:
       - ./:/tmp/db
-      - $HOME/bigdata/pg_normalized_batch:/var/lib/postgresql/data
+      - $HOME/bigdata/pg_normalized_batch_3:/var/lib/postgresql/data
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=pass
       - PGUSER=postgres
     ports:
-      - 3:5432
+      - 1363:5432
